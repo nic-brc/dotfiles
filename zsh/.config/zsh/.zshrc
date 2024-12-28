@@ -1,6 +1,8 @@
 source $HOME/.config/zsh/homes.sh
 
-for f in $ZSH_HOME/*.sh; do source $f; done
+for f in $ZSH_HOME/*.sh; do
+  [[ $f != *install.sh ]] && source $f
+done
 
 export PATH="$HOME/.bin:$PATH"
 

@@ -1,5 +1,8 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[ -f $HOME/.local/share/forgit/forgit.plugin.zsh ] && source $HOME/.local/share/forgit/forgit.plugin.zsh
+PATH="$PATH:$HOME/.local/share/forgit/bin"
+
 #region fzf autocomplete kubectl
 _fzf_complete_kubectl() {
   _fzf_complete --multi --reverse --header-lines=1 -- "$@" < <(
@@ -25,20 +28,6 @@ _fzf_complete_kubectl_post() {
 }
 
 [ -n "$BASH" ] && complete -F _fzf_complete_kubectl -o default -o bashdefault kubectl
-#endregion
-
-#region fzf Autcomplete git
-_fzf_complete_git() {
-  _fzf_complete --multi --reverse -- "$@" < <(
-    git branch -r
-  )
-}
-
-_fzf_complete_git_post() {
-  sed -e 's/\origin\///g'
-}
-
-[ -n "$BASH" ] && complete -F _fzf_complete_git -o default -o bashdefault git
 #endregion
 
 #region fzf autocomplete docker
