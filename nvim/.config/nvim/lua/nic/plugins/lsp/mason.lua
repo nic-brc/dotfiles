@@ -23,33 +23,35 @@ return {
 			},
 		})
 
-	mason_lspconfig.setup({
-		-- list of servers for mason to install
-		ensure_installed = {
-			"ts_ls",
-			"html",
-			"cssls",
-			"dockerls",
-			"sqlls",
-			"cucumber_language_server",
-			"docker_compose_language_service",
-			"dockerls",
-			"lua_ls",
-			"emmet_ls",
-			"gopls",
-			"jdtls",
-			"lemminx",
-		},
-	})
+		mason_lspconfig.setup({
+			-- list of servers for mason to install
+			ensure_installed = {
+				"ts_ls",
+				"html",
+				"cssls",
+				"dockerls",
+				"sqlls",
+				"cucumber_language_server",
+				"docker_compose_language_service",
+				"dockerls",
+				"lua_ls",
+				"emmet_ls",
+				"gopls",
+				"jdtls",
+				"lemminx",
+			},
+		})
 
-	mason_tool_installer.setup({
-		ensure_installed = {
-			"prettier", -- prettier formatter
-			"stylua", -- lua formatter
-			"eslint_d",
-			"sql-formatter",
-			"xmlformatter",
-		},
-	})
+		mason_tool_installer.setup({
+			ensure_installed = {
+				"prettier", -- prettier formatter
+				"stylua", -- lua formatter
+				"eslint_d",
+				"sql-formatter",
+				"xmlformatter",
+				"java-debug-adapter",
+				"java-test",
+			},
+		})
 	end,
 }
