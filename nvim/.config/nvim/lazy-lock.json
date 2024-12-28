@@ -40,7 +40,7 @@
   "nvim-web-devicons": { "branch": "master", "commit": "63f552a7f59badc6e6b6d22e603150f0d5abebb7" },
   "obsidian.nvim": { "branch": "main", "commit": "ae1f76a75c7ce36866e1d9342a8f6f5b9c2caf9b" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
-  "rally.nvim": { "branch": "main", "commit": "0d2677f62fb3b21eda291b450028ab05fa722892" },
+  "rally.nvim": { "branch": "main", "commit": "c9a484f845713dd1b6bc12f75a71b044429b11a7" },
   "rest.nvim": { "branch": "main", "commit": "8b489547ddbe674712750b69b34436527d855500" },
   "swagger-preview.nvim": { "branch": "master", "commit": "9b9bc21096890a1bd0f221a940d04dbab87a38aa" },
   "telescope-dap.nvim": { "branch": "master", "commit": "783366bd6c1e7fa0a5c59c07db37f49c805a28df" },

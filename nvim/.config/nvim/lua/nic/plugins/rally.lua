@@ -4,16 +4,16 @@ return {
     build = "./install.sh",
     config = function()
       require("rally").setup({})
-      vim.keymap.set("n", "<leader>ry", "<cmd>RallyPromptSelector<cr>", {})
-      vim.keymap.set("n", "<leader>ra", "<cmd>RallyOpenBranchArtifact<cr>", {})
+      vim.keymap.set("n", "<leader>ry", "<cmd>Rally promptselector<cr>", {})
+      vim.keymap.set("n", "<leader>ra", "<cmd>Rally openbranchartifact<cr>", {})
     end
 	},
   -- {
   --   dir = "~/projects/rally.nvim/",
   --   config = function()
   --     require("rally").setup()
-  --     vim.keymap.set("n", "<leader>ry", "<cmd>RallyPromptSelector<cr>", {})
-  --     vim.keymap.set("n", "<leader>ra", "<cmd>RallyOpenBranchArtifact<cr>", {})
+  --     vim.keymap.set("n", "<leader>ry", "<cmd>Rally promptselector<cr>", {})
+  --     vim.keymap.set("n", "<leader>ra", "<cmd>Rally openbranchartifact<cr>", {})
   --   end
   -- }
 }
