@@ -1,6 +1,6 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 [ -f $HOME/.local/share/forgit/forgit.plugin.zsh ] && source $HOME/.local/share/forgit/forgit.plugin.zsh
+
 PATH="$PATH:$HOME/.local/share/forgit/bin"
 
 #region fzf autocomplete kubectl

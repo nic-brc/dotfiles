@@ -20,7 +20,5 @@ else
 	export EDITOR='nvim'
 fi
 
-[ -f ~/.forgit/forgit.plugin.zsh ] && source ~/.forgit/forgit.plugin.zsh
-
 export JDTLS_JVM_ARGS="-javaagent:$HOME/.config/nvim/lib/lombok.jar"
 
