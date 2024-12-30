@@ -4,6 +4,8 @@ for f in $ZSH_HOME/*.sh; do
   [[ $f != *install.sh ]] && source $f
 done
 
+source <(fzf --zsh)
+
 export PATH="$HOME/.bin:$PATH"
 
 # User configuration
