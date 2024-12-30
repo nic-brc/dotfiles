@@ -7,3 +7,5 @@ echo "Installing forgit"
 rm -rf $HOME/.local/share/forgit
 git clone --depth 1 https://github.com/wfxr/forgit.git $HOME/.local/share/forgit
 
+echo "Installing oh my zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
