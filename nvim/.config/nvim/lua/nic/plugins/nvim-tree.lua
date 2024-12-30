@@ -7,6 +7,18 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
+    require('neo-tree').setup({
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignore = true,
+          hide_by_name = {
+            ".git",
+            ".gitignore"
+          },
+        }
+      }
+    });
 		vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left<CR>", {})
 		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
 		vim.keymap.set("n", "<leader>bs", ":Neotree git_status reveal float<CR>", {})

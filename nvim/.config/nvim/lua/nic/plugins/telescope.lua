@@ -16,7 +16,19 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
+				pickers = {
+					find_files = {
+						hidden = true,
+					},
+				},
 				defaults = {
+					file_ignore_patterns = {
+						"node_modules",
+						"build",
+						"dist",
+						"yarn.lock",
+						".git",
+					},
 					path_display = {
 						shorten = 2,
 					},
