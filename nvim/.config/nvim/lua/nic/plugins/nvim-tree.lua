@@ -14,7 +14,11 @@ return {
           hide_gitignore = true,
           hide_by_name = {
             ".git",
-            ".gitignore"
+            ".gitignore",
+            "node_modules",
+            ".obsidian",
+            ".gitkeep"
+
           },
         }
       }

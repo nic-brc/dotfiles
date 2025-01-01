@@ -21,6 +21,8 @@ config.window_padding = {
 
 config.max_fps = 120
 
+config.window_decorations = "RESIZE"
+
 -- and finally, return the configuration to wezterm
 return config
 
