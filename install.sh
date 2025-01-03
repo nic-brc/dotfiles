@@ -5,12 +5,10 @@ if ! command -v stow &> /dev/null; then
   exit 1
 fi
 
-for dir in */; do
-  dir=${dir%/}
+while IFS= read -r dir; do
   if [[ $dir != .* ]]; then
-    echo "########### Installing $dir ###########"
-    [ -f $HOME/.config/$dir/install.sh ] && source $HOME/.config/$dir/install.sh
-    stow -R $dir -t $HOME
-  fi 
-done
-
+     echo "########### Installing $dir ###########"
+     [ -f $HOME/.config/$dir/install.sh ] && source $HOME/.config/$dir/install.sh
+     stow -R $dir -t $HOME
+   fi 
+ done < application.list

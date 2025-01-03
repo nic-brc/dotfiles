@@ -1,0 +1,10 @@
+theme = zenbones_dark
+
+cursor-style = block
+
+keybind = ctrl+f=toggle_fullscreen
+
+keybind = ctrl+shift+q=clear_screen
+
+keybind = ctrl+plus=increase_font_size:5
+keybind = ctrl+minus=decrease_font_size:5
