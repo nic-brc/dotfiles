@@ -45,7 +45,7 @@ return {
 			keymap.set("n", "<leader>pg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 			keymap.set(
 				"n",
-				"<leader>fw",
+				"<leader>pw",
 				"<cmd>Telescope grep_string<cr>",
 				{ desc = "Find string under cursor in cwd" }
 			)

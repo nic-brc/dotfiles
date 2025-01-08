@@ -158,6 +158,20 @@ return {
         vmArgs = "" ..
           "-Xmx2g "
       },
+      {
+        name = "Debug Connectall UI";
+        type = 'java';
+        request = 'attach';
+        hostName = "127.0.0.1";
+        port = 8001;
+      },
+      {
+        name = "Debug Connectall Core";
+        type = 'java';
+        request = 'attach';
+        hostName = "127.0.0.1";
+        port = 8000;
+      },
     }
   end
 }

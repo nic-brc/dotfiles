@@ -29,7 +29,7 @@ return {
 				-- 					{ name = "copilot" },
 				-- 					{ name = "luasnip" }, -- For luasnip users.
 				-- 					{ name = "path" },
-				default = { "lsp", "copilot", "snippets", "path" },
+				default = { "lsp", "buffer", "copilot", "snippets", "path" },
 				providers = {
 					copilot = {
 						name = "copilot",
