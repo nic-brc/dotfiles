@@ -21,8 +21,7 @@ config.window_padding = {
 
 config.max_fps = 120
 
-config.window_decorations = "RESIZE"
-
--- and finally, return the configuration to wezterm
+-- Set the font to a Nerd Font
+config.font = wezterm.font("DejaVuSansM Nerd Font", {weight="Regular", stretch="Normal", style="Normal"})-- and finally, return the configuration to wezterm
 return config
 
