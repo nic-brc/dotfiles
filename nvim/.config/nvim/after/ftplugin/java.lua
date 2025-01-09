@@ -61,7 +61,8 @@ local config = {
   -- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
   settings = {
     java = {
-      home ="/home/nic/.sdkman/candidates/java/21.0.5-amzn",
+      home = home .. "/.sdkman/candidates/java/21.0.5-amzn",
+
       eclipse = {
         downloadSources = true,
       },

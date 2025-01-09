@@ -1,7 +1,7 @@
 return {
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "giuxtaposition/blink-cmp-copilot" },
+		dependencies = { "rafamadriz/friendly-snippets", "giuxtaposition/blink-cmp-copilot", "saghen/blink.compat" },
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -29,13 +29,34 @@ return {
 				-- 					{ name = "copilot" },
 				-- 					{ name = "luasnip" }, -- For luasnip users.
 				-- 					{ name = "path" },
-				default = { "lsp", "buffer", "copilot", "snippets", "path" },
+				default = {
+					"lsp",
+					"buffer",
+					"copilot",
+					"snippets",
+					"path",
+					"obsidian",
+					"obsidian_new",
+					"obsidian_tags",
+				},
 				providers = {
 					copilot = {
 						name = "copilot",
 						module = "blink-cmp-copilot",
 						score_offset = 100,
 						async = true,
+					},
+					obsidian = {
+						name = "obsidian",
+						module = "blink.compat.source",
+					},
+					obsidian_new = {
+						name = "obsidian_new",
+						module = "blink.compat.source",
+					},
+					obsidian_tags = {
+						name = "obsidian_tags",
+						module = "blink.compat.source",
 					},
 				},
 			},
