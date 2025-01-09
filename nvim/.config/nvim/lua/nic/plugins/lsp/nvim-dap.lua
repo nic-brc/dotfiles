@@ -163,6 +163,7 @@ return {
         type = 'java';
         request = 'attach';
         hostName = "127.0.0.1";
+        projectName = '',
         port = 8001;
       },
       {
@@ -170,6 +171,7 @@ return {
         type = 'java';
         request = 'attach';
         hostName = "127.0.0.1";
+        projectName = '',
         port = 8000;
       },
     }

@@ -73,7 +73,7 @@ local config = {
         runtimes = {
           {
             name = "JavaSE-20",
-            path = "/home/nic/.sdkman/candidates/java/21.0.5-amzn",
+            path = home .. "/.sdkman/candidates/java/21.0.5-amzn",
           },
         },
       },
