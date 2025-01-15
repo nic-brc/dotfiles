@@ -143,7 +143,7 @@ local config = {
 
 -- Needed for debugging
 config["on_attach"] = function(client, bufnr)
-  jdtls.setup_dap({ hotcodereplace = "auto" })
+  jdtls.setup_dap({ hotcodereplace = "off" })
   require("jdtls.dap").setup_dap_main_class_configs()
 end
 

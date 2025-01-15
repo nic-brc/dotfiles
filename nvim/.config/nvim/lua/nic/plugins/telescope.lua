@@ -8,6 +8,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		},
 		config = function()
 			require("telescope").setup({
@@ -19,9 +20,11 @@ return {
 				pickers = {
 					find_files = {
 						hidden = true,
+						theme = "ivy",
 					},
 				},
 				defaults = {
+          theme = "ivy",
 					file_ignore_patterns = {
 						"node_modules",
 						"build",
@@ -51,6 +54,7 @@ return {
 			)
 
 			require("telescope").load_extension("ui-select")
+      require("telescope").load_extension("fzf")
 		end,
 	},
 }
