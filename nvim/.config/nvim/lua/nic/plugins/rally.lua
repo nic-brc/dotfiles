@@ -8,12 +8,4 @@ return {
       vim.keymap.set("n", "<leader>ra", "<cmd>Rally openbranchartifact<cr>", {})
     end
 	},
-  -- {
-  --   dir = "~/projects/rally.nvim/",
-  --   config = function()
-  --     require("rally").setup()
-  --     vim.keymap.set("n", "<leader>ry", "<cmd>Rally promptselector<cr>", {})
-  --     vim.keymap.set("n", "<leader>ra", "<cmd>Rally openbranchartifact<cr>", {})
-  --   end
-  -- }
 }

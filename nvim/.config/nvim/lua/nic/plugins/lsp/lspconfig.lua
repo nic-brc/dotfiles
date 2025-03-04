@@ -28,8 +28,8 @@ return {
 					capabilities = capabilities,
 					settings = {
 						cucumber = {
-							features = { "**/features/**/*.feature" },
-							glue = { "**/steps/**/*.js" },
+							features = { "**/features/**/*.feature", "**/.feature" },
+							glue = { "**/steps/**/*.js", "**/steps/**/*.ts" },
 						},
 					},
 				})
@@ -55,6 +55,8 @@ return {
 				map("<leader>ds", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 
 				map("<leader>ws", require("telescope.builtin").lsp_dynamic_workspace_symbols, "[W]orkspace [S]ymbols")
+
+				map("<leader>wd", require("telescope.builtin").diagnostics, "Show Workspace diagnostics")
 
 				map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 

@@ -5,7 +5,7 @@ kubectl_testn() {
   curl https://home-$schema.testn.f4tech.com/kubeconfig/config > ~/.kube/config
 }
 
-ch() {
+chrome() {
   local cols sep
   cols=$(( COLUMNS / 3 ))
   sep='{::}'

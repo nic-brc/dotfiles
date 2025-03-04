@@ -2,4 +2,4 @@ bin
 nvim
 tmux
 zsh
-wezterm
+ghostty

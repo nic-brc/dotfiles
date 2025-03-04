@@ -40,6 +40,7 @@ vim.filetype.add({
 		["http"] = "http",
 		["rest"] = "http",
 		["zul"] = "xml",
+    ["jenkinsfile"] = "groovy"
 	},
 })
 

@@ -7,7 +7,6 @@ return {
 		config = function()
 			local autosession = require("auto-session")
 
-
 			autosession.setup({
 				auto_session_suppress_dirs = { "~/", "~/Downloads", "~/Documents", "~/Desktop" },
         auto_clean_after_session_restore = true,
