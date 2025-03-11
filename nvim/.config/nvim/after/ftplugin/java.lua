@@ -71,9 +71,13 @@ local config = {
         -- TODO Update this by adding any runtimes that you need to support your Java projects and removing any that you don't have installed
         -- The runtime name parameters need to match specific Java execution environments.  See https://github.com/tamago324/nlsp-settings.nvim/blob/2a52e793d4f293c0e1d61ee5794e3ff62bfbbb5d/schemas/_generated/jdtls.json#L317-L334
         runtimes = {
+          -- {
+          --   name = "JavaSE-20",
+          --   path = home .. "/.sdkman/candidates/java/21.0.5-amzn",
+          -- },
           {
             name = "JavaSE-20",
-            path = home .. "/.sdkman/candidates/java/21.0.5-amzn",
+            path = home .. "/.sdkman/candidates/java/21.0.5-tem",
           },
         },
       },
@@ -93,10 +97,10 @@ local config = {
       format = {
         enabled = true,
         -- Formatting works by default, but you can refer to a specific file/URL if you choose
-        -- settings = {
-        --   url = "https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml",
-        --   profile = "GoogleStyle",
-        -- },
+        settings = {
+          url = home .. "/projects/connectall/tools/Codestyle/eclipse-google-formatter.xml",
+          profile = "Project copy",
+        },
       },
       completion = {
         favoriteStaticMembers = {
