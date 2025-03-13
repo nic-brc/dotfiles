@@ -1,7 +1,7 @@
 return {
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "giuxtaposition/blink-cmp-copilot", "saghen/blink.compat" },
+		dependencies = { "rafamadriz/friendly-snippets", "saghen/blink.compat" },
 		version = "*",
 
 		---@module 'blink.cmp'
@@ -29,7 +29,6 @@ return {
 				default = {
 					"lsp",
 					"buffer",
-					"copilot",
 					"snippets",
 					"path",
 					"obsidian",
@@ -37,12 +36,12 @@ return {
 					"obsidian_tags",
 				},
 				providers = {
-					copilot = {
-						name = "copilot",
-						module = "blink-cmp-copilot",
-						score_offset = 100,
-						async = true,
-					},
+					-- copilot = {
+					-- 	name = "copilot",
+					-- 	module = "blink-cmp-copilot",
+					-- 	score_offset = 100,
+					-- 	async = true,
+					-- },
 					obsidian = {
 						name = "obsidian",
 						module = "blink.compat.source",
