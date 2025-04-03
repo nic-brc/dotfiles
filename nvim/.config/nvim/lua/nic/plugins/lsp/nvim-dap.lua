@@ -114,6 +114,49 @@ return {
       -- require('dapui').close()
     end
 
+    dap.adapters["pwa-node"] = {
+      type = "server",
+      host = "localhost",
+      port = "${port}",
+      executable = {
+        command = "/Users/cn669600/.nvm/versions/node/v20.18.0/bin/node",
+        -- 💀 Make sure to update this path to point to your installation
+        args = { "/Users/cn669600/.local/share/nvim/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js", "${port}" },
+      },
+    }
+
+    -- dap.configurations.javascript = {
+    --   {
+    --     type = "pwa-node",
+    --     request = "launch",
+    --     name = "Launch file",
+    --     program = "${file}",
+    --     cwd = "${workspaceFolder}",
+    --   },
+    -- }
+    --
+    -- dap.configurations.typescript = {
+    --   {
+    --     type = "pwa-node",
+    --     request = "launch",
+    --     name = "Launch file",
+    --     program = "${file}",
+    --     cwd = "${workspaceFolder}",
+    --   },
+    -- }
+    --
+    -- dap.configurations.cucumber = {
+    --   {
+    --     type = "pwa-node",
+    --     request = "launch",
+    --     runtimeExecutable = "${env:HOME}/.nvm/versions/node/v20.18.0/bin/node",
+    --     name = "Current Feature File",
+    --     cwd = "${workspaceFolder}",
+    --     program = "./node_modules/.bin/cucumber-js",
+    --     args = "${file}",
+    --   },
+    -- }
+
     -- Add dap configurations based on your language/adapter settings
     -- https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
     dap.configurations.java = {

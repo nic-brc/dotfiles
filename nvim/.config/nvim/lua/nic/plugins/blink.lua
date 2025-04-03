@@ -1,7 +1,12 @@
 return {
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "saghen/blink.compat" },
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+			"saghen/blink.compat",
+			"Kaiser-Yang/blink-cmp-avante",
+			{ "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+		},
 		version = "*",
 
 		---@module 'blink.cmp'
@@ -27,6 +32,7 @@ return {
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
 				default = {
+					"avante",
 					"lsp",
 					"buffer",
 					"snippets",
@@ -35,13 +41,10 @@ return {
 					"obsidian_new",
 					"obsidian_tags",
 				},
+				per_filetype = {
+					sql = { "snippets", "dadbod", "buffer" },
+				},
 				providers = {
-					-- copilot = {
-					-- 	name = "copilot",
-					-- 	module = "blink-cmp-copilot",
-					-- 	score_offset = 100,
-					-- 	async = true,
-					-- },
 					obsidian = {
 						name = "obsidian",
 						module = "blink.compat.source",
@@ -54,6 +57,12 @@ return {
 						name = "obsidian_tags",
 						module = "blink.compat.source",
 					},
+					avante = {
+						module = "blink-cmp-avante",
+						name = "Avante",
+						opts = {},
+					},
+					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 				},
 			},
 		},
