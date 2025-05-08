@@ -24,7 +24,12 @@ return {
 		})
 
 		mason_lspconfig.setup({
-      automatic_installation = true,
+			automatic_installation = true,
+      automatic_enable = {
+        exclude = {
+          "jdtls"
+        }
+      },
 			ensure_installed = {
 				"html",
 				"cssls",
@@ -34,10 +39,9 @@ return {
 				"docker_compose_language_service",
 				"dockerls",
 				"lua_ls",
-				"emmet_ls",
 				"gopls",
 				"jdtls",
-				"lemminx",
+				"vtsls",
 			},
 		})
 
@@ -50,7 +54,7 @@ return {
 				"xmlformatter",
 				"java-debug-adapter",
 				"java-test",
-        "js-debug-adapter"
+				"js-debug-adapter",
 			},
 		})
 	end,

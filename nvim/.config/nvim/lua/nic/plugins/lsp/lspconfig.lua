@@ -11,35 +11,15 @@ return {
 		dependencies = {
 			{ "antosha417/nvim-lsp-file-operations", config = true },
 			{ "folke/neodev.nvim", opts = {} },
-			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
-			local lspconfig = require("lspconfig")
-			local capabilities = require("blink.cmp").get_lsp_capabilities()
-			local mason_lspconfig = require("mason-lspconfig")
-
-			mason_lspconfig.setup({
-				handlers = {
-					function(server)
-						-- Setting up JDTLS with nvim-jdtls
-						if server == "jdtls" then
-							return
-						end
-						lspconfig[server].setup({
-							capabilities = capabilities,
-						})
-					end,
-					["cucumber_language_server"] = function()
-						lspconfig["cucumber_language_server"].setup({
-							capabilities = capabilities,
-							settings = {
-								cucumber = {
-									features = { "**/*.feature" },
-									glue = { "**/steps/**/*.js", "**/steps/**/*.ts" },
-								},
-							},
-						})
-					end,
+			vim.lsp.config("cucumber_language_server", {
+				root_markers = { "package.json" },
+				settings = {
+					cucumber = {
+						features = { "**/*.feature" },
+						glue = { "**/steps/**/*.js", "**/steps/**/*.ts" },
+					},
 				},
 			})
 
