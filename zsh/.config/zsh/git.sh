@@ -20,3 +20,5 @@ git config --global alias.lo 'forgit log'
 git config --global alias.ga 'forgit add'
 
 alias ga='git ga'
+
+git config --global core.excludesFile '~/.config/zsh/gitignore-global'

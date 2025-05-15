@@ -23,6 +23,31 @@ return {
 				},
 			})
 
+			vim.diagnostic.config({
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = "✘",
+						[vim.diagnostic.severity.WARN] = "▲",
+						[vim.diagnostic.severity.HINT] = "⚑",
+						[vim.diagnostic.severity.INFO] = "»",
+					},
+				},
+        virtual_text = true
+			})
+
+			vim.api.nvim_create_autocmd("LspAttach", {
+				desc = "Enable inlay hints",
+				callback = function(event)
+					local id = vim.tbl_get(event, "data", "client_id")
+					local client = id and vim.lsp.get_client_by_id(id)
+					if client == nil or not client.supports_method("textDocument/inlayHint") then
+						return
+					end
+
+					vim.lsp.inlay_hint.enable(true, { bufnr = event.buf })
+				end,
+			})
+
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 				callback = function(event)
@@ -31,7 +56,10 @@ return {
 						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 					end
 
-					map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+					-- map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+					map("gd", vim.lsp.buf.definition, "[G]oto [D]efinition")
+					-- map("<leader>D", vim.lsp.buf.lsp_type_definitions, "Type [D]efinition")
+
 					map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 					map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 					map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")

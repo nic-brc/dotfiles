@@ -202,6 +202,13 @@ return {
           "-Xmx2g "
       },
       {
+        name = "ICCA Backend";
+        type = 'java';
+        request = 'attach';
+        hostName = "127.0.0.1";
+        port = 9001;
+      },
+      {
         name = "Debug Connectall UI";
         type = 'java';
         request = 'attach';
