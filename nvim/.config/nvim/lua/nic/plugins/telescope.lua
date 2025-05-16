@@ -17,20 +17,24 @@ return {
 					},
 				},
 				pickers = {
-					find_files = {
+					git_files = {
 						hidden = true,
             theme = "ivy",
 					},
+          live_grep = {
+            hidden = true,
+            theme = "ivy",
+            file_ignore_patterns = {
+              "node_modules",
+              "build",
+              "dist",
+              "yarn.lock",
+              ".git",
+              ".class",
+            },
+          },
 				},
 				defaults = {
-					file_ignore_patterns = {
-						"node_modules",
-						"build",
-						"dist",
-						"yarn.lock",
-						".git",
-						".class",
-					},
 					path_display = {
 						shorten = 2,
 					},
@@ -43,7 +47,7 @@ return {
 
 			local keymap = vim.keymap -- for conciseness
 
-			keymap.set("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+			keymap.set("n", "<leader><leader>", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find files in cwd" })
 			keymap.set("n", "<leader>pg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 			keymap.set("v", "<leader>pg", "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", { desc = "Search after seleciton" })
 
