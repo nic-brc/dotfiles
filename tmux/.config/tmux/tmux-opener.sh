@@ -3,8 +3,8 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(yq '.[] | keys[] | @sh' .opener.yml | fzf --preview='yq -r ".{n} | to_entries[].value" .opener.yml')
-    url=$(yq -r ".[] | .$(echo ${selected}) | select(.)" .opener.yml)
+  selected=$(yq '.[] | keys[] | @sh' .opener.yml | fzf --preview='elinks $(yq -r ".{n} | to_entries[].value" .opener.yml)')
+  url=$(yq -r ".[] | .$(echo ${selected}) | select(.)" .opener.yml)
 fi
 
 if [[ -z $selected ]]; then

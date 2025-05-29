@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/projects ~/vaults -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/projects ~/vaults -mindepth 1 -maxdepth 1 -type d | fzf --preview='mdless {}/Readme.md')
 fi
 
 if [[ -z $selected ]]; then

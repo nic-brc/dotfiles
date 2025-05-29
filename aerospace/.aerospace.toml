@@ -132,6 +132,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-ctrl-o = 'workspace O'
     alt-ctrl-s = 'workspace S'
     alt-ctrl-t = 'workspace T'
+    alt-ctrl-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-ctrl-shift-1 = 'move-node-to-workspace 1'
@@ -148,6 +149,7 @@ automatically-unhide-macos-hidden-apps = true
     alt-ctrl-shift-o = 'move-node-to-workspace O'
     alt-ctrl-shift-s = 'move-node-to-workspace S'
     alt-ctrl-shift-t = 'move-node-to-workspace T'
+    alt-ctrl-shift-z = 'move-node-to-workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-ctrl-tab = 'workspace-back-and-forth'
@@ -211,4 +213,8 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'app.zen-browser.zen'
     run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+    if.app-id = 'us.zoom.xos'
+    run = 'move-node-to-workspace Z'
 

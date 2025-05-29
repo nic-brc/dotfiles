@@ -27,12 +27,12 @@ return {
 				-- Adjusts spacing to ensure icons are aligned
 				nerd_font_variant = "mono",
 			},
-
-      completion = {
-        ghost_text = {
-          enabled = true
-        }
-      },
+			signature = { enabled = true },
+			completion = {
+				ghost_text = {
+					enabled = true,
+				},
+			},
 
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
@@ -69,6 +69,9 @@ return {
 						opts = {},
 					},
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+					buffer = {
+						max_items = 3,
+					},
 				},
 			},
 		},
