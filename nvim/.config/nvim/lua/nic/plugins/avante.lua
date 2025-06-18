@@ -7,17 +7,23 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
+		"ravitemer/mcphub.nvim",
 	},
 	version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
 	opts = {
 		provider = "gemini",
-		gemini = {
-			endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-			model = "gemini-2.5-flash-preview-04-17",
-			timeout = 30000,
-			temperature = 0,
-			max_tokens = 4096,
-		},
+    prividers = {
+      gemini = {
+        endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+        model = "gemini-2.5-flash-preview-04-17",
+        timeout = 30000,
+        temperature = 0,
+        max_tokens = 4096,
+      },
+    },
+    behaviour = {
+      enable_token_counting = false
+    },
 		system_prompt = function()
 			local hub = require("mcphub").get_hub_instance()
 			return hub:get_active_servers_prompt()

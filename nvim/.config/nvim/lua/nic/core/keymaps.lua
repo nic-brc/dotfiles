@@ -87,3 +87,4 @@ vim.keymap.set("n", '<leader>d?', function() local widgets = require "dap.ui.wid
 vim.keymap.set("n", '<leader>df', '<cmd>Telescope dap frames<cr>')
 vim.keymap.set("n", '<leader>dh', '<cmd>Telescope dap commands<cr>')
 vim.keymap.set("n", '<leader>de', function() require('telescope.builtin').diagnostics({default_text=":E:"}) end)
+vim.keymap.set("n", '<leader>dtd', function() require().diagnostics({default_text=":E:"}) end)
