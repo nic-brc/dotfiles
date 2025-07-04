@@ -117,15 +117,12 @@ automatically-unhide-macos-hidden-apps = true
     alt-ctrl-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-ctrl-1 = 'workspace 1'
-    alt-ctrl-2 = 'workspace 2'
-    alt-ctrl-3 = 'workspace 3'
-    alt-ctrl-4 = 'workspace 4'
-    alt-ctrl-5 = 'workspace 5'
-    alt-ctrl-6 = 'workspace 6'
-    alt-ctrl-7 = 'workspace 7'
-    alt-ctrl-8 = 'workspace 8'
-    alt-ctrl-9 = 'workspace 9'
+    alt-ctrl-q = 'workspace Q'
+    alt-ctrl-w = 'workspace W'
+    alt-ctrl-e = 'workspace E'
+    alt-ctrl-r = 'workspace R'
+    alt-ctrl-y = 'workspace Y'
+    alt-ctrl-u = 'workspace u'
     alt-ctrl-b = 'workspace B'
     alt-ctrl-c = 'workspace C'
     alt-ctrl-i = 'workspace I'
@@ -135,16 +132,12 @@ automatically-unhide-macos-hidden-apps = true
     alt-ctrl-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-ctrl-shift-1 = 'move-node-to-workspace 1'
-    alt-ctrl-shift-2 = 'move-node-to-workspace 2'
-    alt-ctrl-shift-3 = 'move-node-to-workspace 3'
-    alt-ctrl-shift-4 = 'move-node-to-workspace 4'
-    alt-ctrl-shift-5 = 'move-node-to-workspace 5'
-    alt-ctrl-shift-6 = 'move-node-to-workspace 6'
-    alt-ctrl-shift-7 = 'move-node-to-workspace 7'
-    alt-ctrl-shift-8 = 'move-node-to-workspace 8'
-    alt-ctrl-shift-9 = 'move-node-to-workspace 9'
-    alt-ctrl-shift-c = 'move-node-to-workspace C'
+    alt-ctrl-shift-q = 'move-node-to-workspace Q'
+    alt-ctrl-shift-w = 'move-node-to-workspace W'
+    alt-ctrl-shift-e = 'move-node-to-workspace E'
+    alt-ctrl-shift-r = 'move-node-to-workspace R'
+    alt-ctrl-shift-y = 'move-node-to-workspace Y'
+    alt-ctrl-shift-u = 'move-node-to-workspace U'
     alt-ctrl-shift-i = 'move-node-to-workspace I'
     alt-ctrl-shift-o = 'move-node-to-workspace O'
     alt-ctrl-shift-s = 'move-node-to-workspace S'
@@ -188,7 +181,11 @@ automatically-unhide-macos-hidden-apps = true
 
 [[on-window-detected]]
     if.app-id = 'com.google.Chrome'
-    run = 'move-node-to-workspace B' 
+    run = 'move-node-to-workspace C' 
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.rdc.macos'
+    run = 'move-node-to-workspace R'
 
 [[on-window-detected]]
     if.app-id = 'com.jetbrains.intellij'
@@ -201,10 +198,6 @@ automatically-unhide-macos-hidden-apps = true
 [[on-window-detected]]
     if.app-id = 'com.spotify.client'
     run = 'move-node-to-workspace S'
-
-[[on-window-detected]]
-    if.app-id = 'com.google.Chrome.app.mdpkiolbdkhdjpekfbkbmhigcaggjagi'
-    run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
     if.app-id = 'org.chromium.Chromium'

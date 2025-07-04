@@ -42,10 +42,12 @@ return {
 				"gopls",
 				"jdtls",
 				"vtsls",
+        "typos_lsp"
 			},
 		})
 
 		mason_tool_installer.setup({
+			automatic_installation = true,
 			ensure_installed = {
 				"prettier",
 				"stylua",

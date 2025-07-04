@@ -15,7 +15,7 @@ return {
 	opts = {
 		controls = {
 			element = "repl",
-			enabled = false,
+			enabled = true,
 			icons = {
 				disconnect = "",
 				pause = "",
@@ -216,6 +216,7 @@ return {
 				type = "java",
 				request = "attach",
 				hostName = "127.0.0.1",
+				projectName = "connectall",
 				port = 9001,
 			},
 			{
@@ -223,7 +224,7 @@ return {
 				type = "java",
 				request = "attach",
 				hostName = "127.0.0.1",
-				projectName = "",
+				projectName = "ConnectAll-UI",
 				port = 8001,
 			},
 			{
@@ -231,7 +232,7 @@ return {
 				type = "java",
 				request = "attach",
 				hostName = "127.0.0.1",
-				projectName = "",
+				projectName = "connectall",
 				port = 8000,
 			},
 		}
