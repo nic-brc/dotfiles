@@ -38,7 +38,7 @@ return {
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
 				default = {
-					"avante",
+					"codecompanion",
 					"lsp",
 					"buffer",
 					"snippets",
@@ -62,11 +62,6 @@ return {
 					obsidian_tags = {
 						name = "obsidian_tags",
 						module = "blink.compat.source",
-					},
-					avante = {
-						module = "blink-cmp-avante",
-						name = "Avante",
-						opts = {},
 					},
 					dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
 					buffer = {
