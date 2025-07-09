@@ -29,13 +29,20 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
+-- Fake tell vim the netrw is already loaded
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwSettings = 1
+vim.g.loaded_netrwFileHandlers = 1
+vim.g.loaded_netrw_gitignore = 1
+
 vim.opt.updatetime = 50
 vim.opt.conceallevel = 1
 
 vim.opt.colorcolumn = "120"
 vim.wo.number = true
-vim.opt.spelllang = "en_us"
-vim.opt.spell = true
+-- vim.opt.spelllang = "en_us"
+-- vim.opt.spell = true
 
 vim.filetype.add({
 	extension = {

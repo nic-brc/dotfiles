@@ -18,7 +18,7 @@ return {
 				settings = {
 					cucumber = {
 						features = { "**/*.feature" },
-						glue = { "**/steps/**/*.js", "**/steps/**/*.ts", "*/e2e/steps/**/*.ts"  },
+						glue = { "**/steps/**/*.js", "**/steps/**/*.ts", "*/e2e/steps/**/*.ts" },
 					},
 				},
 			})
@@ -32,7 +32,7 @@ return {
 						[vim.diagnostic.severity.INFO] = "»",
 					},
 				},
-        virtual_text = true
+				virtual_text = true,
 			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
