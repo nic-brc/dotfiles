@@ -1,5 +1,12 @@
 {
   "theme": "GitHub",
   "selectedAuthType": "gemini-api-key",
-  "preferredEditor": "neovim"
+  "preferredEditor": "neovim",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
 }
+

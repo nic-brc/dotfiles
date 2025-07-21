@@ -25,7 +25,7 @@ return {
 				use_nvim_cmp_as_default = false,
 				-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 				-- Adjusts spacing to ensure icons are aligned
-				nerd_font_variant = "mono",
+				nerd_font_variant = "normal",
 			},
 			signature = { enabled = true },
 			completion = {
@@ -38,7 +38,6 @@ return {
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			sources = {
 				default = {
-					"codecompanion",
 					"lsp",
 					"buffer",
 					"snippets",
