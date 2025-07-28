@@ -212,7 +212,6 @@ return {
 				type = "java",
 				request = "attach",
 				hostName = "127.0.0.1",
-				projectName = "connectall",
 				port = 9001,
 			},
 			{
