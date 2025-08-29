@@ -15,4 +15,3 @@ After completing a step, update the list:
 - [ ] Step 2: Formulate a plan.
 - [ ] Step 3: Execute the plan.
 
-Before you do anything create the Todo list and wait for the user to approve this plan!

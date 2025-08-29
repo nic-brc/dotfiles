@@ -59,6 +59,7 @@ vim.keymap.set("n", "<leader>on", function ()
 end)
 
 vim.keymap.set("n", "<leader>ok", ":!mv '%:p' " .. vim.env.HOME .. "/vaults/nic/reviewed<cr>:bd<cr>")
+vim.keymap.set("n", "<C-w>z", "<cmd>silent :tabnew %<CR>")
 
 -- Debugging
 vim.keymap.set("n", "<leader>bb", "<cmd>lua require'dap'.toggle_breakpoint()<cr>")

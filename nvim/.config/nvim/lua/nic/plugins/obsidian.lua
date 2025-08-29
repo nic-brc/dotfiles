@@ -10,9 +10,9 @@ return {
 	},
 	config = function()
 		require("obsidian").setup({
-      ui = {
-          enable = false
-      },
+			ui = {
+				enable = true,
+			},
 			completion = {
 				nvim_cmp = false,
 			},

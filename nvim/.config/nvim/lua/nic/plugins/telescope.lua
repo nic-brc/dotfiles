@@ -49,10 +49,11 @@ return {
 
 			keymap.set("n", "<leader><leader>", "<cmd>Telescope git_files<cr>", { desc = "Fuzzy find files in cwd" })
 			keymap.set("n", "<leader>pg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-			keymap.set("v", "<leader>pg", "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", { desc = "Search after seleciton" })
+			keymap.set("v", "<leader>pg", "y<ESC>:Telescope live_grep default_text=<c-r>0<CR>", { desc = "Search after selection" })
 
 			keymap.set("n", "<leader>wd", require("telescope.builtin").diagnostics, { desc = "Show Workspace diagnostics" })
 			keymap.set("n", "<leader>pw", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+			keymap.set("n", "<leader>pf", require("telescope.builtin").find_files, { desc = "Show Workspace diagnostics" })
 
 			require("telescope").load_extension("ui-select")
 			require("telescope").load_extension("fzf")

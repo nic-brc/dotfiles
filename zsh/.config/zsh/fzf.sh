@@ -2,7 +2,7 @@
 [ -f $HOME/.local/share/forgit/forgit.plugin.zsh ] && source $HOME/.local/share/forgit/forgit.plugin.zsh
 
 PATH="$PATH:$HOME/.local/share/forgit/bin"
-export FZF_DEFAULT_OPTS='--height 80% --tmux 80% --layout reverse --border top'
+export FZF_DEFAULT_OPTS='--height 80% --layout reverse --border top'
 
 #region fzf autocomplete kubectl
 _fzf_complete_kubectl() {
