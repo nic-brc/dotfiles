@@ -96,14 +96,24 @@ local config = {
 				includeDecompiledSources = true,
 			},
 			signatureHelp = { enabled = true },
-			format = {
-				enabled = true,
-				-- Formatting works by default, but you can refer to a specific file/URL if you choose
-				settings = {
-					url = home .. "/projects/connectall/tools/Codestyle/eclipse-google-formatter.xml",
-					profile = "Project copy",
-				},
-			},
+			format = (function()
+				local root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1])
+				if not root_dir then
+					return { enabled = true }
+				end
+				local formatter_path = root_dir .. "/tools/Codestyle/eclipse-google-formatter.xml"
+				if vim.fn.filereadable(formatter_path) == 1 then
+					return {
+						enabled = true,
+						settings = {
+							url = formatter_path,
+							profile = "Project copy",
+						},
+					}
+				else
+					return { enabled = true }
+				end
+			end)(),
 			completion = {
 				favoriteStaticMembers = {
 					"org.hamcrest.MatcherAssert.assertThat",

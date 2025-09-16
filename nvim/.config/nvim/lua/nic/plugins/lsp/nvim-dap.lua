@@ -246,6 +246,14 @@ return {
 				port = 32796,
 				projectName = "ConnectAll-UI",
 			},
+			{
+				type = "java",
+				name = "Attach to scheduler",
+				request = "attach",
+				hostName = "localhost",
+				port = 8002,
+				projectName = "connectall-scheduler",
+			},
 		}
 	end,
 }
