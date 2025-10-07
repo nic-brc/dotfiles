@@ -5,6 +5,10 @@
   "hideBanner": true,
   "hideTips": true,
   "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
   },
   "vimMode": true
 }
