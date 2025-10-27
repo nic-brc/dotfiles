@@ -42,7 +42,8 @@ return {
 				"gopls",
 				"jdtls",
 				"vtsls",
-        "typos_lsp"
+        "typos_lsp",
+        "zls"
 			},
 		})
 

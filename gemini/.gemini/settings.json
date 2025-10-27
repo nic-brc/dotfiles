@@ -1,12 +1,17 @@
 {
-  "theme": "ANSI",
-  "selectedAuthType": "gemini-api-key",
-  "preferredEditor": "neovim",
-  "hideBanner": true,
-  "hideTips": true,
-  "mcpServers": {
+  "ui": {
+    "hideTips": true,
+    "hideBanner": true,
+    "theme": "ANSI"
   },
-  "vimMode": true
+  "mcpServers": {},
+  "general": {
+    "preferredEditor": "neovim",
+    "vimMode": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    }
+  }
 }
-
-
