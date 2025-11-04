@@ -4,7 +4,11 @@
     "hideBanner": true,
     "theme": "ANSI"
   },
-  "mcpServers": {},
+  "mcpServers": {
+    "playwright": {
+      "command": "mcp-server-playwright"
+    }
+  },
   "general": {
     "preferredEditor": "neovim",
     "vimMode": true
