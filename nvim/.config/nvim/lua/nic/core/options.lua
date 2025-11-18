@@ -51,6 +51,9 @@ vim.filetype.add({
 		["zul"] = "xml",
     ["jenkinsfile"] = "groovy"
 	},
+  pattern = {
+    ["Jenkinsfile.*"] = "groovy"
+  },
 })
 
 -- Highlight when yanking (copying) text
@@ -63,3 +66,4 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
