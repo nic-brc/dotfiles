@@ -1,16 +1,12 @@
 {
-  "mcpServers": {
-    "playwright": {
-      "command": "mcp-server-playwright"
-    }
-  },
   "model": {
     "name": "gemini-2.5-flash"
   },
   "ui": {
     "hideTips": true,
     "hideBanner": true,
-    "theme": "ANSI"
+    "theme": "GitHub",
+    "useAlternateBuffer": true
   },
   "general": {
     "preferredEditor": "neovim",
