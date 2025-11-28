@@ -6,6 +6,13 @@ local connectall_sqlbuilder =
   "Also it have a look at @dependent-models/config-util/src/main/java/com/go2group/connectall/config/dao/DatabasePersistence.java to understand the usage. " ..
   "Feel free to edit directly to the file."
 
+local refactor_selection =
+  "Can you refactor this selection ```" ..
+  "{selection}" ..
+  "``` in {line} " ..
+  "Have a look at making it more readable and maintainable. " ..
+  "Also prioritize early returns and cleaning up deeply nested ifs else statements. "
+
 return {
   "folke/sidekick.nvim",
   dependencies = {
@@ -19,9 +26,8 @@ return {
         enabled = true,
       },
       prompts = {
-        maintain = "Can you refactor this function {file}-{line} to make it more maintainable and readable?",
-        refactor = "Can you refactor this selection {selection} in {file} to make it more maintainable and readable?",
         connectall_sqlbuilder = connectall_sqlbuilder,
+        refactor_selection = refactor_selection,
       },
     },
     nex = {

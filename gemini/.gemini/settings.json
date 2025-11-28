@@ -5,12 +5,12 @@
   "ui": {
     "hideTips": true,
     "hideBanner": true,
-    "theme": "GitHub",
-    "useAlternateBuffer": true
+    "theme": "GitHub"
   },
   "general": {
     "preferredEditor": "neovim",
-    "vimMode": true
+    "vimMode": true,
+    "previewFeatures": true
   },
   "security": {
     "auth": {
